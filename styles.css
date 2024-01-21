@@ -1,0 +1,973 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Empêche le débordement horizontal */
+  }
+  
+  .banner-section {
+    background-color: #c5c0c0; /* Couleur grise pour le fond de la bannière */
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .banner-info {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Transition de couleur au survol */
+    color: #ffee00;
+  }
+  
+  .banner-info:hover {
+    color: #ff8c00; /* Changement de couleur au survol */
+  }
+  
+  .banner-info img {
+    width: 30px; /* Ajuste la taille de l'icône selon tes besoins */
+    margin-right: 10px;
+  }
+  
+  header {
+    background: #1d0016;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0; /* Ajout de cette propriété pour éliminer l'espace sous le header */
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  nav{
+    position:relative;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    background: #1d0016;
+  }
+  nav .wrapper{
+    position: relative;
+    max-width: 1300px;
+    padding: 0px 30px;
+    height: 70px;
+    line-height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .wrapper .logo a{
+    color: #f2f2f2;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .wrapper .nav-links{
+    display: inline-flex;
+  }
+  .nav-links li{
+    list-style: none;
+  }
+  .nav-links li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .nav-links li a:hover{
+    background: #3A3B3C;
+  }
+  .nav-links .mobile-item{
+    display: none;
+  }
+  .nav-links .drop-menu{
+    position: absolute;
+    background: #242526;
+    width: 180px;
+    line-height: 45px;
+    top: 85px;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  }
+  .nav-links li:hover .drop-menu,
+  .nav-links li:hover .mega-box{
+    transition: all 0.3s ease;
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .drop-menu li a{
+    width: 100%;
+    display: block;
+    padding: 0 0 0 15px;
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  .mega-box{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 0 30px;
+    top: 85px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .mega-box .content{
+    background: #242526;
+    padding: 25px 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  }
+  .mega-box .content .row{
+    width: calc(25% - 30px);
+    line-height: 45px;
+  }
+  .content .row img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .content .row header{
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .content .row .mega-links{
+    margin-left: -40px;
+    border-left: 1px solid rgba(255,255,255,0.09);
+  }
+  .row .mega-links li{
+    padding: 0 20px;
+  }
+  .row .mega-links li a{
+    padding: 0px;
+    padding: 0 20px;
+    color: #d9d9d9;
+    font-size: 17px;
+    display: block;
+  }
+  .row .mega-links li a:hover{
+    color: #f2f2f2;
+  }
+  .wrapper .btn{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+  }
+  .wrapper .btn.close-btn{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+  }
+  
+  @media screen and (max-width: 970px) {
+    .wrapper .btn{
+      display: block;
+    }
+    .wrapper .nav-links{
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      max-width: 350px;
+      top: 0;
+      left: -100%;
+      background: #242526;
+      display: block;
+      padding: 50px 10px;
+      line-height: 50px;
+      overflow-y: auto;
+      box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+      transition: all 0.3s ease;
+    }
+    /* custom scroll bar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #242526;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3A3B3C;
+    }
+    #menu-btn:checked ~ .nav-links{
+      left: 0%;
+    }
+    #menu-btn:checked ~ .btn.menu-btn{
+      display: none;
+    }
+    #close-btn:checked ~ .btn.menu-btn{
+      display: block;
+    }
+    .nav-links li{
+      margin: 15px 10px;
+    }
+    .nav-links li a{
+      padding: 0 20px;
+      display: block;
+      font-size: 20px;
+    }
+    .nav-links .drop-menu{
+      position: static;
+      opacity: 1;
+      top: 65px;
+      visibility: visible;
+      padding-left: 20px;
+      width: 100%;
+      max-height: 0px;
+      overflow: hidden;
+      box-shadow: none;
+      transition: all 0.3s ease;
+    }
+    #showDrop:checked ~ .drop-menu,
+    #showMega:checked ~ .mega-box{
+      max-height: 100%;
+    }
+    .nav-links .desktop-item{
+      display: none;
+    }
+    .nav-links .mobile-item{
+      display: block;
+      color: #f2f2f2;
+      font-size: 20px;
+      font-weight: 500;
+      padding-left: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .nav-links .mobile-item:hover{
+      background: #3A3B3C;
+    }
+    .drop-menu li{
+      margin: 0;
+    }
+    .drop-menu li a{
+      border-radius: 5px;
+      font-size: 18px;
+    }
+    .mega-box{
+      position: static;
+      top: 65px;
+      opacity: 1;
+      visibility: visible;
+      padding: 0 20px;
+      max-height: 0px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .mega-box .content{
+      box-shadow: none;
+      flex-direction: column;
+      padding: 20px 20px 0 20px;
+    }
+    .mega-box .content .row{
+      width: 100%;
+      margin-bottom: 15px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .mega-box .content .row:nth-child(1),
+    .mega-box .content .row:nth-child(2){
+      border-top: 0px;
+    }
+    .content .row .mega-links{
+      border-left: 0px;
+      padding-left: 15px;
+    }
+    .row .mega-links li{
+      margin: 0;
+    }
+    .content .row header{
+      font-size: 19px;
+    }
+  }
+  nav input{
+    display: none;
+  }
+  
+  /* Ajout de la flèche vers le bas pour indiquer le dropdown */
+  /* nav ul li ul:after {
+    content: " ▼";
+  } */
+  
+  /* Ligne séparatrice avec dégradé arc-en-ciel sur toute la largeur du menu */
+  hr::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0; /* Élimine l'espace après la ligne séparatrice */
+  }
+  .image-section {
+    position: relative;
+    text-align: center;
+  }
+  
+  .background-image {
+    width: 100%;
+    height: 350px; /* Ajuste la hauteur en fonction de la largeur pour maintenir les proportions de l'image */
+  }
+  
+  .promo-title {
+    position: absolute;
+    top: 30%; /* Ajuste la position verticale du titre */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px; /* Ajuste la taille du titre */
+    font-weight: bold; /* Ajout de l'effet de texte robuste */
+    color: #000000; /* Couleur du texte */
+    text-shadow: 6px 10px 10px rgba(12, 0, 0, 0.3); /* Ajout d'une ombre au texte */
+  }
+  
+  .buy-button {
+    position: absolute;
+    top: 60%; /* Ajuste la position verticale du bouton */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: blink 1s infinite alternate; /* Ajout de l'animation de clignotement */
+  }
+  
+  .buy-button:hover {
+    background-color: #e05d00; /* Changement de couleur au survol */
+    animation: none; /* Désactive l'animation au survol */
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+
+/* Ajoutez la règle suivante pour cacher l'icône de menu sur les écrans plus larges */
+@media screen and (min-width: 768px) {
+    .menu-icon {
+      display: none;
+    }
+  }
+
+  .countdown-section {
+    background-color: #000; /* Couleur de fond noir */
+    color: #fff; /* Couleur du texte blanc */
+    padding: 20px 0; /* Espacement intérieur de la section */
+    text-align: center;
+}
+
+.countdown-container {
+    max-width: 400px; /* Largeur maximale du conteneur réduite */
+    margin: 0 auto; /* Centrer le conteneur */
+    display: flex; /* Utilisation de flexbox pour aligner les éléments sur la même ligne */
+    align-items: center; /* Aligner verticalement les éléments */
+    justify-content: center; /* Centrer horizontalement les éléments */
+    flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
+}
+
+.countdown-title {
+    font-size: 14px;
+    margin-right: 10px; /* Ajout d'une marge à droite pour séparer le texte du compte à rebours */
+}
+
+.countdown-block {
+    background-color: #ff0000; /* Couleur de fond rouge */
+    margin: 0 5px; /* Espacement entre les blocs réduit */
+    padding: 5px; /* Espacement intérieur réduit */
+    border-radius: 5px; /* Coins arrondis */
+    display: inline-block; /* Afficher chaque bloc en ligne */
+}
+
+.countdown-digit {
+    font-size: 24px; /* Taille de police réduite */
+    font-weight: bold;
+    color: #fff; /* Couleur du texte blanc */
+    text-align: center; /* Centrer le texte horizontalement */
+    display: block; /* Afficher chaque digit en tant que bloc */
+}
+
+.countdown-label {
+    font-size: 10px; /* Taille de police réduite */
+    color: #fff; /* Couleur du texte blanc */
+    text-align: center; /* Centrer le texte horizontalement */
+    display: block; /* Afficher chaque label en tant que bloc */
+}
+
+/* Ajoute cette règle pour la nouvelle section countdown-product-section */
+.countdown-product-section {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.sales-count {
+  font-size: 12px;
+  margin: 0;
+}
+/* Styles pour les blocs d'articles */
+.article-block {
+  display: flex;
+  flex-direction: column; /* Afficher les informations en dessous de l'image */
+  align-items: center;
+  justify-content: center;
+  height: 350px; /* Ajustez la hauteur selon vos besoins */
+  background-color: #000000; /* Fond noir */
+  color: #ffffff; /* Texte blanc */
+  padding: 61px 80px; /* Ajustez l'espacement selon vos besoins */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre légère */
+  transition: transform 0.3s; /* Effet de transition pour le zoom au survol */
+}
+
+.article-block:hover .article-img {
+  transform: scale(1.1); /* Zoom au survol de l'image */
+}
+
+.article-img {
+  max-width: calc(100% - 4px); /* Ajustez la largeur pour tenir compte de la bordure */
+  max-height: 95%; /* Ajustez la hauteur de l'image */
+  border: 2px solid #e74c3c; /* Bordure rouge */
+  border-radius: 15px; /* Contours arrondis */
+  margin-bottom: 10px; /* Espacement entre l'image et les informations */
+  transition: transform 0.3s; /* Effet de transition pour le zoom au survol */
+}
+
+.article-info {
+  text-align: center;
+  position:relative;
+}
+
+.price, .promo-price, .name, .sales {
+  margin: 5px 0;
+}
+
+.strikethrough {
+  text-decoration: line-through; /* Barre au milieu pour le prix avant promo */
+}
+
+
+
+.quick-buy-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e74c3c; /* Couleur de fond rouge */
+  color: #ffffff; /* Texte blanc */
+  padding: 5px 40px; /* Ajustez l'espacement selon vos besoins */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s; /* Effets de transition pour l'opacité et la position */
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
+}
+
+.article-block:hover .quick-buy-button {
+  opacity: 1; /* Afficher le bouton au survol du bloc d'article */
+}
+
+.achat-libre {
+  background-color: #f0eaea; /* Fond gris */
+  padding: 40px 0; /* Espacement intérieur de la section */
+}
+
+.achat-libre img {
+  width: 100%; /* Images occupent 100% de la largeur de leur conteneur */
+  height: auto; /* Ajuste la hauteur de manière proportionnelle */
+  border-radius: 10px; /* Contours arrondis pour les images */
+  display: block; /* Supprime l'espace en bas dû à l'affichage en ligne */
+  margin-bottom: 10px; /* Espacement entre les images */
+}
+
+
+.quality-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 400px;
+  background-color: #fff8f8;
+}
+
+.middle{
+  height: 300px;
+}
+.quality-block {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff; /* Couleur de fond de départ */
+  border: 2px solid #d2b48c;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Ajout de la propriété transform à la transition */
+  max-width: 200px;
+  flex: 1;
+  margin: 10px;
+}
+
+.quality-block:hover {
+  background-color: #ffe4b5; /* Nouvelle couleur de fond au survol */
+  transform: translateY(-5px); /* Translation vers le haut au survol */
+}
+
+.quality-block i {
+  font-size: 40px;
+  color: #d2b48c;
+  margin-bottom: 10px;
+}
+
+.quality-block h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.quality-block p {
+  font-size: 14px;
+  color: #666666;
+}
+
+/* Style de la barre de tri */
+label[for="categorie-produit"] {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #333;
+}
+
+#categorie-produit {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  /* margin: 1%; */
+}
+
+#categorie-produit:hover {
+  background-color: #f5f5f5;
+}
+
+#filtre-prix {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#filtre-prix:hover {
+  background-color: #f5f5f5;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  width: 18%; /* Ajustez la largeur pour afficher 5 articles par ligne */
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s; /* Ajoutez une transition pour le survol */
+}
+
+.product:hover {
+  transform: scale(1.05); /* Zoom au survol */
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+.add-to-cart {
+  display: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Ajoutez ces styles au fichier CSS existant */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; /* Ajustez la largeur selon vos besoins */
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.cart-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item img {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 10px;
+}
+
+.remove-button {
+  background-color: #ff4500;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.checkout-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.cart-item.remove-animation {
+  animation: fadeOut 0.5s ease-out;
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+}
+.floating-cart-icon {
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+}
+
+.floating-cart-icon img {
+  width: 30px; /* Ajustez la taille de l'icône selon vos besoins */
+  height: auto;
+  margin-right: 5px;
+}
+
+#cartCount {
+  background-color: red; /* Couleur de fond du nombre d'articles */
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.animation-container {
+  opacity: 0; /* Réglez l'opacité initiale pour le rendre invisible */
+  transform: translateY(20px); /* Déplacez-le vers le bas initialement */
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out; /* Définissez les propriétés de transition */
+}
+
+.animation-container.visible {
+  opacity: 1; /* Rendez-le visible à l'entrée */
+  transform: translateY(0); /* Ramenez-le à sa position d'origine */
+}
+
+.add-to-cart-message {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  margin-right: 60px; /* Ajoutez cette ligne pour décaler vers la gauche */
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  animation: fadeInOut 2s ease-in-out;
+}
+/* Styles pour les champs de saisie de quantité */
+.cart-item-details input {
+  width: 50px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Styles pour le total */
+#cartTotal {
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  background-color: #ecf0f1; /* Couleur de fond */
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 50%;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+      opacity: 0;
+  }
+  10%, 90% {
+      opacity: 1;
+  }
+}
+
+/* Mini-Bloc Styles */
+.mini-block {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #fdfdfd; /* Vert */
+  color: #fff; /* Texte blanc */
+  border-radius: 15px 0 0 5px; /* Bord supérieur gauche arrondi, bord inférieur droit anguleux */
+  padding: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+/* Styles de l'icône d'avis */
+.feedback, .scroll-to-top {
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+/* Couleur de survol */
+.feedback:hover, .scroll-to-top:hover {
+  background-color: #cbcfcb; /* Vert foncé */
+}
+/* Style du footer */
+.footer {
+  background-color: #000000; /* Couleur de fond */
+}
+
+/* Style de la section supérieure avec les garanties */
+.upper-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #222; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  padding: 10px 0; /* Espacement intérieur */
+}
+
+.guarantees {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+/* Style de la section supérieure avec les garanties */
+.guarantee-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 20px;
+  height: 100%; /* Ajout de la hauteur à 100% */
+}
+
+.guarantee-item i {
+  font-size: 30px; /* Ajustez la taille de l'icône selon vos besoins */
+  margin-bottom: 5px;
+  color: #b4b62e; /* Couleur de l'icône */
+}
+
+/* Style de la section du milieu avec quatre colonnes */
+.middle-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.section-column {
+  flex: 1;
+  margin: 0 20px;
+  background-color: #000000; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  padding: 20px; /* Espacement intérieur */
+}
+.section-column h3 {
+  font-size: 25px; /* Ajuste la taille de la police du titre */
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #6d5b05;
+}
+
+.section-column p {
+  font-size: 12px; /* Ajuste la taille de la police du paragraphe */
+  margin-bottom: 10px;
+}
+.section-column li {
+  font-size: 12px; /* Ajuste la taille de la police du paragraphe */
+  margin-bottom: 10px;
+}
+
+.footer h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.separator-vertical {
+  width: 1px;
+  background-color: #800808; /* Couleur de la ligne verticale séparatrice */
+  height: 100%;
+  margin: 0 10px;
+}
+
+/* Style de la section inférieure avec le copyright */
+.lower-section {
+  background-color: #241e01; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+/* Style des liens */
+.footer a {
+  color: #f3f3f3; /* Couleur des liens */
+  text-decoration: none;
+  transition: color 0.3s; /* Animation de changement de couleur */
+}
+
+.footer a:hover {
+  color: #0056b3; /* Nouvelle couleur au survol */
+}
+
+/* Style des icônes des réseaux sociaux */
+.social-icons i {
+  font-size: 20px; /* Ajuste la taille des icônes selon tes besoins */
+  margin-right: 10px;
+  color: #fff; /* Couleur de l'icône par défaut */
+  transition: color 0.3s, filter 0.3s; /* Animation de changement de couleur et de filtre au survol */
+}
+
+.social-icons a:hover i {
+  color: #0056b3; /* Nouvelle couleur au survol */
+  filter: brightness(1.5); /* Luminosité augmentée au survol */
+}
+/* Ajustement du style du formulaire de newsletter */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-form input {
+  width: calc(100% - 2px); /* Reduit la largeur du champ de saisie */
+  padding: 3px; /* Reduit la hauteur du champ de saisie */
+  margin-bottom: 10px;
+  font-size: 14px; /* Ajuste la taille de la police */
+  border-radius:10px 10px;
+}
+
+.newsletter-form button {
+  width: calc(100% - 60px); /* Reduit la largeur du bouton */
+  padding: 3px; /* Reduit la hauteur du bouton */
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px; /* Ajuste la taille de la police */
+  border-radius:10px 10px;
+}
+
+.newsletter-form button:hover {
+  background-color: #003366;
+}

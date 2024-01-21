@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+  <!-- Favicons -->
+  <link href="img/log.png" rel="icon">
+  <link href="img/log.png" rel="apple-touch-icon">
+  <title>VapeHub</title>
+</head>
+<body>
+
+    <div class="banner-section">
+        <div class="banner-info">
+          <img src="img/icons/livraison.png" alt="Livraison Icon">
+          <span>Livraison partout à Libreville en -48h</span>
+        </div>
+        <div class="banner-info">
+          <img src="img/icons/securepay.png" alt="Paiement Sécurisé Icon">
+          <span>Paiement sécurisé</span>
+        </div>
+        <div class="banner-info">
+          <img src="img/icons/support.png" alt="Support 24/24 Icon">
+          <span>Support 24h/24</span>
+        </div>
+      </div>
+
+  <header>
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="#">V̴A̴P̴E̴H̴U̴B̴</a></div>
+        <input type="radio" name="slider" id="menu-btn">
+        <input type="radio" name="slider" id="close-btn">
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">A Propos</a></li>
+          <li><a href="#">Nouveautés</a></li>
+          
+          <li>
+            <a href="#" class="desktop-item">Produits</a>
+            <input type="checkbox" id="showMega">
+            <label for="showMega" class="mobile-item">Produits</label>
+            <div class="mega-box">
+              <div class="content">
+                <div class="row">
+                  <img src="img/vap.jpg" alt="">
+                </div>
+                <div class="row">
+                  <header>E-Liquide</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Saveurs</a></li>
+                    <li><a href="#">Meilleurs ventes</a></li>
+                    <li><a href="#">Packs</a></li>
+                    <li><a href="#">Faire une demande</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Puffs & Pod</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Puff</a></li>
+                    <li><a href="#">Pod</a></li>
+                    <li><a href="#">Lots</a></li>
+                    <li><a href="#">Personnalisée</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Box & Mod</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Box</a></li>
+                    <li><a href="#">Mod</a></li>
+                    <li><a href="#">Materiels</a></li>
+                    <li><a href="#">Personnalisée</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="#" class="desktop-item">Matériels</a>
+            <input type="checkbox" id="showDrop">
+            <label for="showDrop" class="mobile-item">Matériels</label>
+            <ul class="drop-menu">
+              <li><a href="#">Kit complet</a></li>
+              <li><a href="#">Boxs</a></li>
+              <li><a href="#">Batteries</a></li>
+              <li><a href="#">Clearomiseurs</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contacter</a></li>
+        </ul>
+        <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+      </div>
+    </nav>
+  </header>
+  <hr>
+
+  <section class="image-section">
+    <video autoplay loop muted class="background-video">
+        <source src="img/bg.mp4" type="video/mp4">
+        Votre navigateur ne prend pas en charge la balise vidéo.
+    </video>
+    <!-- <h2 class="promo-title">𝒫𝓇𝑜𝒻𝒾𝓉𝑒𝓏 𝒹𝑒𝓈 𝓅𝓇𝑜𝓂𝑜𝓉𝒾𝑜𝓃𝓈 !!!</h2> -->
+    <a href="#maSection"><button class="buy-button">Aller à la boutique  <i class="fas fa-angle-double-down"></i></button></a>
+</section>
+
+  <section class="countdown-section">
+    <div class="countdown-container">
+        <h2 class="countdown-title"><i class="fas fa-bolt" style="color: chocolate;"></i> VENTE FLASH | Se termine dans:</h2>
+        <div id="countdown" class="countdown">
+            <div class="countdown-block">
+                <span class="countdown-digit" id="days"></span>
+                <span class="countdown-label">Jours</span>
+            </div>
+            <div class="countdown-block">
+                <span class="countdown-digit" id="hours"></span>
+                <span class="countdown-label">Heures</span>
+            </div>
+            <div class="countdown-block">
+                <span class="countdown-digit" id="minutes"></span>
+                <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-block">
+                <span class="countdown-digit" id="seconds"></span>
+                <span class="countdown-label">Secondes</span>
+            </div>
+        </div>
+    </div><br><br>
+
+    <div id="articleCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+    <!-- Blocs d'images d'articles -->
+    <div class="carousel-item active"><br><br>
+      <div class="article-block article-item-1">
+        <img src="img/V-flash/1.JPEG" class="article-img" alt="Article 1">
+        <div class="article-info">
+          <p class="price">6 990 FCFA</p>
+          <p class="promo-price"><span class="strikethrough">12 300 FCFA</span></p>
+          <p class="name">Nom de l'article</p>
+          <p class="sales">+ 250 ventes</p>
+          <button class="quick-buy-button" data-article-id="1">Achat flash</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item"><br><br>
+      <div class="article-block article-item-1">
+        <img src="img/V-flash/2.JPEG" class="article-img" alt="Article 2">
+        <div class="article-info">
+          <p class="price">5 000 FCFA</p>
+          <p class="promo-price"><span class="strikethrough">8 600 FCFA</span></p>
+          <p class="name">Nom de l'article</p>
+          <p class="sales">+ 7K ventes</p>
+          <button class="quick-buy-button" data-article-id="2">Achat flash</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item"><br><br>
+      <div class="article-block article-item-1">
+        <img src="img/V-flash/3.JPEG" class="article-img" alt="Article 3">
+        <div class="article-info">
+          <p class="price">4000 FCFA</p>
+          <p class="promo-price"><span class="strikethrough">$YYY FCFA</span></p>
+          <p class="name">Nom de l'article</p>
+          <p class="sales">2k ventes</p>
+          <button class="quick-buy-button" data-article-id="3">Achat flash</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item"><br><br>
+      <div class="article-block article-item-1">
+        <img src="img/V-flash/4.JPEG" class="article-img" alt="Article 4">
+        <div class="article-info">
+          <p class="price">12 399 FCFA</p>
+          <p class="promo-price"><span class="strikethrough">YYY FCFA</span></p>
+          <p class="name">Nom de l'article</p>
+          <p class="sales">XXX</p>
+          <button class="quick-buy-button" data-article-id="4">Achat flash</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item"><br><br>
+      <div class="article-block article-item-1">
+        <img src="img/V-flash/5.JPEG" class="article-img" alt="Article 5">
+        <div class="article-info">
+          <p class="price">45 000 FCFA</p>
+          <p class="promo-price"><span class="strikethrough">89 900 FCFA</span></p>
+          <p class="name">Nom de l'article</p>
+          <p class="sales">12 ventes</p>
+          <button class="quick-buy-button" data-article-id="5">Achat Flash</button>
+        </div>
+      </div>
+    </div>
+    <!-- Ajoutez d'autres articles selon vos besoins -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#articleCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#articleCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+<!-- Nouvelle section avec un fond gris -->
+<section class="achat-libre bg-gray">
+  <div class="container">
+    <div class="row">
+      <!-- Deux images alignées horizontalement au-dessus -->
+      <div class="col-md-6 mb-4">
+        <a href="lien-de-la-page-1.html">
+          <img src="img/V-Chic/1.JPEG" alt="Image 1" class="img-fluid">
+        </a>
+      </div>
+      <div class="col-md-6 mb-4">
+        <a href="lien-de-la-page-2.html">
+          <img src="img/V-Chic/2.JPEG" alt="Image 2" class="img-fluid">
+        </a>
+      </div>
+      <!-- Trois images partageant la largeur en dessous -->
+      <div class="col-md-4 mb-4">
+        <a href="lien-de-la-page-3.html">
+          <img src="img/V-Chic/3.JPEG" alt="Image 3" class="img-fluid">
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="lien-de-la-page-4.html">
+          <img src="img/V-Chic/4.JPEG" alt="Image 4" class="img-fluid">
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="lien-de-la-page-5.html">
+          <img src="img/V-Chic/5.JPEG" alt="Image 5" class="img-fluid">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quality-section">
+  <div class="quality-block">
+    <i class="fas fa-star"></i>
+    <h3>Qualité</h3>
+    <p>Toutes nos vapes sont des produits certifiés et en libre vente en Union européenne.</p>
+  </div>
+
+  <div class="quality-block middle">
+    <i class="fas fa-check-circle"></i>
+    <h3>Fiabilité</h3>
+    <p>Nos produits sont conçus avec les normes les plus élevées pour garantir une fiabilité exceptionnelle.</p>
+  </div>
+
+  <div class="quality-block">
+    <i class="fas fa-truck"></i>
+    <h3>Livraison Rapide</h3>
+    <p>Profitez d'une livraison rapide et sécurisée directement à votre porte.</p>
+  </div>
+</section>
+
+<div id="maSection" class="new-products">
+  <!-- Les nouveaux produits doivent etre ajoutés ici -->
+</div>
+
+<!-- <label for="categorie-produit">Filtrer par catégorie :</label> -->
+<i class="fas fa-sliders-h" style="margin: 20px;"></i>
+<select id="categorie-produit" onchange="filtrerProduits()">
+  <option value="tous">Tous les produits</option>
+  <option value="categorie1">Catégorie 1</option>
+  <option value="categorie2">Catégorie 2</option>
+  <!-- Ajoutez d'autres options selon vos catégories -->
+</select>
+
+<select id="filtre-prix" onchange="filtrerProduits()">
+  <option value="tous">Tous les prix</option>
+  <option value="0-20">0€ - 20€</option>
+  <option value="20-50">20€ - 50€</option>
+  <option value="50-100">50€ - 100€</option>
+  <option value="100+">Plus de 100€</option>
+</select>
+
+<div class="floating-cart-icon" onclick="showCart()">
+  <img src="img/panier.png" alt="Panier">
+  <span id="cartCount">0</span>
+</div>
+
+<div class="animation-container">
+  <div class="products">
+    <!-- Les produits seront ajoutés ici -->
+</div>
+</div>
+
+  
+
+<div id="cartModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeCartModal()">&times;</span>
+      <h2>Panier</h2>
+      <div id="cartItems"></div>
+      <p id="cartTotal" class="cart-total">Total: $0</p>
+      <button class="checkout-button" onclick="checkout()">Passer ma commande</button>
+  </div>
+</div>
+<div class="add-to-cart-message" id="addToCartMessage">Produit ajouté au panier !</div>
+
+
+<!-- Mini-Bloc -->
+<div class="mini-block">
+  <div class="feedback">
+    <i class="fas fa-comment-alt"></i>
+  </div>
+  <div class="scroll-to-top" id="scrollToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+</div>
+<footer class="footer">
+  <div class="upper-section">
+    <div class="guarantees">
+  <div class="guarantee-item">
+    <i class="fas fa-credit-card"></i>
+    <p>Paiement 3X</p>
+  </div>
+  <div class="separator"></div>
+  <div class="guarantee-item">
+    <i class="fas fa-shipping-fast"></i>
+    <p>Livraison -48h</p>
+  </div>
+  <div class="separator"></div>
+  <div class="guarantee-item">
+    <i class="fas fa-undo-alt"></i>
+    <p>Satisfait ou remboursé (14 jours)</p>
+  </div>
+  <div class="separator"></div>
+  <div class="guarantee-item">
+    <i class="fas fa-star"></i>
+    <p>Programme de fidélité</p>
+  </div>
+</div>
+  </div>
+  
+  <div class="middle-section">
+    <div class="section-column">
+      <h3>Nos produits</h3>
+      <ul>
+        <li><a href="#">Boutique</a></li>
+        <li><a href="#">Promotions/Destockages</a></li>
+        <li><a href="#">Top Ventes</a></li>
+        <li><a href="#">Materiels</a></li>
+        <li><a href="#">Tutoriels</a></li>
+        <li><a href="#">Fidélité</a></li>
+        <li><a href="#">Nos fournisseurs</a></li>
+      </ul>
+    </div>
+    <div class="separator-vertical"></div>
+    <div class="section-column">
+      <h3>A propos</h3>
+      <ul>
+        <li><a href="#">Qui sommes nous?</a></li>
+        <li><a href="#">Avis</a></li>
+        <li><a href="#">Partenaires</a></li>
+        <li><a href="#">Livraison</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Conditions gén. de ventes</a></li>
+        <li><a href="#">Conditions gén. d'utilisation</a></li>
+      </ul>
+    </div>
+    <div class="separator-vertical"></div>
+    <div class="section-column">
+      <h3>Contacter</h3>
+      <ul>
+        <li><a href="#">Postuler chez nous</a></li>
+        <li><a href="#">175 Boulevard Mounanga II<br>Libreville, Gabon</a></li>
+        <li><a href="#">Contact@vapehub.ga</a></li>
+        <li>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="separator-vertical"></div>
+    <div class="section-column">
+      <h3>Information</h3>
+      <p style="text-align: justify;">Les produits que nous vendons sont strictement réservés aux plus de 18 ans. Fumer nuit gravement à votre santé et celle de vos proches.🔞</p>
+    </div>
+    <div class="section-column">
+      <h3>Newsletter</h3>
+      <p>Abonnez-vous à notre newsletter pour ne rien manquer : promos, nouveautés, coupons et pour les nouveaux abonné profitez de 20% de reductions sur nos puffs.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Votre e-mail" required>
+        <button type="submit">S'abonner</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="lower-section">
+    <p>SARL VAPEHUB 34 567 756, Capital: 2 000 000 FCFA &copy; 2024 Edited by <a href="" style="color: bisque;">Numerix'Art</a></p>
+  </div>
+</footer>
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/rebours.js"></script>
+  <script src="produits.js"></script>
+  <script src="assets/triage.js"></script>
+</body>
+</html>

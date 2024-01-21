@@ -1,0 +1,68 @@
+/* Ajouts pour la gestion de la vidéo sur les smartphones */
+@media screen and (max-width: 768px) {
+    body, html {
+      margin: 0;
+      padding: 0;
+  }
+    /* Réduire la largeur de la vidéo pour éviter le débordement */
+    .video-container {
+      width: 100%;
+      overflow: hidden;
+    }
+  
+    .video-container video {
+      width: 100%;
+      height: auto;
+      max-width: 100%; /* Ajout de cette règle pour s'assurer que la vidéo ne dépasse pas la largeur de l'écran */
+    }
+  
+    /* Ajouter ces règles pour gérer le débordement sur la bannière */
+    .image-section {
+      overflow: hidden;
+    }
+  
+    /* Ajouter ces règles pour la bannière responsivité */
+    .banner-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap; /* Permet le retour à la ligne */
+    }
+    
+    .banner-info div {
+      flex: 1; /* Chaque élément occupe toute la largeur */
+      text-align: center; /* Centrer le texte */
+    }
+    
+    .banner-info span {
+      display: none; /* Cacher les span sur les petits écrans */
+    }
+  
+     
+      .upper-section .guarantee-item p {
+        display: none; /* Cacher les paragraphes */
+    }
+
+    .upper-section .guarantee-item img {
+        width: 50px; /* Ajustez la taille des icônes selon vos préférences */
+        height: auto;
+    }
+    .product {
+      width: 42%; /* Afficher un article par ligne sur les écrans plus petits */
+  }
+    /* Styles pour les champs de saisie de quantité sur les petits écrans */
+    .cart-item-details input {
+      width: 80%;
+      margin: 10px auto; /* Centrer et ajouter un espacement en haut/bas */
+    }
+
+    /* Styles pour le total sur les petits écrans */
+    #cartTotal {
+      width: 60%;
+      /* margin: 3px auto; Centrer et ajouter un espacement en haut/bas */
+    }
+    .modal-content{
+      width: 350px;
+    }
+    
+  }
