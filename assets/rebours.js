@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Définissez la date de fin du compte à rebours (remplacez avec votre date)
-  var countdownDate = new Date("fev 20, 2025 00:00:00").getTime();
+  var countdownDate = new Date("jan 20, 2026 00:00:00").getTime();
 
   // Mettez à jour le compte à rebours toutes les secondes
   var x = setInterval(function() {
